@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/yuzhe/Google_Drive/thesis/paper/first_draft/chap3'
+let g:netrw_dirhist_2='/home/yuzhe/Google_Drive/lang_detect_challenge/discussion'
+let g:netrw_dirhist_3='/home/yuzhe/Google_Drive/thesis/paper/first_draft/chap1'
+let g:netrw_dirhist_4='/home/yuzhe/Google_Drive/thesis/paper/first_draft'
+let g:netrw_dirhist_5='/home/yuzhe/Google_Drive/thesis/paper/first_draft/abstract'
+let g:netrw_dirhist_6='/home/yuzhe/Google_Drive/thesis/paper/first_draft'
+let g:netrw_dirhist_7='/home/yuzhe/Google_Drive/lang_detect_challenge/discussion'
