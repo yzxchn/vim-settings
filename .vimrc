@@ -16,11 +16,14 @@ set hlsearch
 " highlight current line
 set cursorline
 
+" make backspace delete over starting point, indent, etc. 
+set backspace=2
+
 " plug.vim config
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/vim-syntastic/syntastic.git'
-
+Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git'
 
 call plug#end()
@@ -40,3 +43,6 @@ let g:syntastic_mode_map = {
 
 " YCM auto remove preview
 autocmd CompleteDone * pclose
+
+" NERDTree show hidden files
+let NERDTreeShowHidden=1
