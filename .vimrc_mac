@@ -1,0 +1,3 @@
+" make backspace delete over starting point, indent, etc. 
+set backspace=2
+

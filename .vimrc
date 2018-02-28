@@ -16,8 +16,6 @@ set hlsearch
 " highlight current line
 set cursorline
 
-" make backspace delete over starting point, indent, etc. 
-set backspace=2
 
 " plug.vim config
 call plug#begin('~/.vim/plugged')
@@ -46,3 +44,10 @@ autocmd CompleteDone * pclose
 
 " NERDTree show hidden files
 let NERDTreeShowHidden=1
+" Map key for toggling NERDTree panel to F2
+nmap <F2> :NERDTreeToggle<CR>
+
+" Load Mac specific settings
+if has('macunix')
+    source ~/.vimrc_mac
+endif
