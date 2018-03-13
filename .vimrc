@@ -37,7 +37,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["tex"]}
+    \ "passive_filetypes": ["tex", "html"]}
 
 " YCM auto remove preview
 autocmd CompleteDone * pclose
@@ -46,6 +46,9 @@ autocmd CompleteDone * pclose
 let NERDTreeShowHidden=1
 " Map key for toggling NERDTree panel to F2
 nmap <F2> :NERDTreeToggle<CR>
+
+" enable line numbers
+let NERDTreeShowLineNumbers=1
 
 " Load Mac specific settings
 if has('macunix')
