@@ -1,11 +1,16 @@
 syntax enable
-set t_Co=16
+"set t_Co=16
+set t_Co=256
 set background=dark
 colorscheme solarized
 filetype indent plugin on
 
-" enable line number
-set number
+" Always show at least one line above/below the cursor.
+set scrolloff=1
+set sidescrolloff=5
+
+" enable hybrid hybrid numbering
+set number relativenumber
 
 " tabs are spaces
 set expandtab
@@ -22,7 +27,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'https://github.com/Valloric/YouCompleteMe.git'
+Plug 'https://github.com/Valloric/YouCompleteMe.git', {'do': './install.py'}
+Plug 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 
 call plug#end()
 
