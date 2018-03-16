@@ -1,10 +1,23 @@
 syntax enable
 "set t_Co=16
 set ruler
-set t_Co=256
+set laststatus=2
+"set t_Co=256
 set background=dark
 colorscheme solarized
 filetype indent plugin on
+
+" statusline settings
+set statusline=%f%m\ -\ %y " filename mode - filetype
+set statusline+=%=       " switch to right aligned
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set statusline+=\ %p%%  " percentage in file
+set statusline+=\ %l:%c " linenumber : columnnumber
+
 
 " Always show at least one line above/below the cursor.
 set scrolloff=1
@@ -34,10 +47,6 @@ Plug 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 call plug#end()
 
 " syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
