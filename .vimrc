@@ -66,6 +66,12 @@ nmap <F2> :NERDTreeToggle<CR>
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 
+" Use tab to show buffer menu
+set wildchar=<Tab> wildmenu wildmode=full
+" map buffer menu to F3
+set wildcharm=<C-Z>
+nnoremap <F3> :b <C-Z>
+
 " Load Mac specific settings
 if has('macunix')
     source ~/.vimrc_mac
