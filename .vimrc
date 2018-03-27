@@ -7,13 +7,16 @@ set background=dark
 colorscheme solarized
 filetype indent plugin on
 
+" enable matchit.vim
+runtime macros/matchit.vim
+
 " Set viminfo to restore maximum of 15 buffers across sessions.
 set viminfo+=%15
 
 " statusline settings
 set statusline=%f%m\ -\ %y " filename mode - filetype
 set statusline+=%=       " switch to right aligned
-" syntastic info in statusline
+" syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
