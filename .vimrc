@@ -67,7 +67,9 @@ autocmd CompleteDone * pclose
 " NERDTree show hidden files
 let NERDTreeShowHidden=1
 " Map key for toggling NERDTree panel to F2
-nmap <F2> :NERDTreeToggle<CR>
+noremap <F2> :NERDTreeToggle<CR>
+" Map jj in insert mode to ESC
+inoremap jj <ESC>
 
 " enable line numbers
 let NERDTreeShowLineNumbers=1
