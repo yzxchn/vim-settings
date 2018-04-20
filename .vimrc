@@ -11,7 +11,7 @@ filetype indent plugin on
 runtime macros/matchit.vim
 
 " Set viminfo to restore maximum of 15 buffers across sessions.
-set viminfo+=%15
+set viminfo+=%30
 
 " statusline settings
 set statusline=%f%m\ -\ %y " filename mode - filetype
@@ -49,6 +49,7 @@ Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', {'do': './install.py'}
 Plug 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 
@@ -61,6 +62,9 @@ let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["tex", "html"]}
 
+" vim-python-syntax settings
+let g:python_highlight_all = 1
+
 " YCM auto remove preview
 autocmd CompleteDone * pclose
 
@@ -68,17 +72,15 @@ autocmd CompleteDone * pclose
 let NERDTreeShowHidden=1
 " Map key for toggling NERDTree panel to F2
 noremap <F2> :NERDTreeToggle<CR>
-" Map jj in insert mode to ESC
-inoremap jj <ESC>
 
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 
-" Use tab to show buffer menu
-set wildchar=<Tab> wildmenu wildmode=full
-" map buffer menu to F3
-set wildcharm=<C-Z>
-nnoremap <F3> :b <C-Z>
+" Map jj in insert mode to ESC
+inoremap jj <ESC>
+
+" Show completion menu
+set wildmenu wildmode=longest,list,full
 
 " Load Mac specific settings
 if has('macunix')
