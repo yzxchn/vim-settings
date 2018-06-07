@@ -55,15 +55,12 @@ call plug#end()
 " syntastic settings
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["tex", "html"]}
-
-" vim-python-syntax settings
-let g:python_highlight_all = 1
-
+let g:syntastic_python_checkers = ["python", "flake8"]
+let g:syntastic_python_flake8_args = "--ignore=E501i,W291"
 " YCM auto remove preview
 autocmd CompleteDone * pclose
 
