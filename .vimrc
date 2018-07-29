@@ -49,6 +49,8 @@ Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', {'do': './install.py'}
 Plug 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
+" Plug 'https://github.com/pangloss/vim-javascript.git' 
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 call plug#end()
 
