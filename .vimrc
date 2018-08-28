@@ -62,7 +62,7 @@ let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["tex", "html"]}
 let g:syntastic_python_checkers = ["python", "flake8"]
-let g:syntastic_python_flake8_args = "--ignore=E501i,W291,E126,E127"
+let g:syntastic_python_flake8_args = "--ignore=E501i,W291,E121,E126,E127"
 " YCM auto remove preview
 autocmd CompleteDone * pclose
 
