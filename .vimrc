@@ -2,9 +2,10 @@ syntax enable
 "set t_Co=16
 set ruler
 set laststatus=2
-"set t_Co=256
+set t_Co=256
+set termguicolors
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 filetype indent plugin on
 
 " enable matchit.vim
@@ -51,6 +52,7 @@ Plug 'https://github.com/Valloric/YouCompleteMe.git', {'do': './install.py'}
 Plug 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 " Plug 'https://github.com/pangloss/vim-javascript.git' 
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
