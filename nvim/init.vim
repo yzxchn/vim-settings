@@ -60,15 +60,17 @@ Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
-" ctrlp settings
-" skip files in .gitignore
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
 " fzf settings
 " mappings
 " file finder
 nnoremap <Leader>f :GFiles<CR>
+" Uncomment to enable preview window
+" command! -bang -nargs=? -complete=dir GFiles
+"   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview({'options': ['--preview', 'bat {} || less {}']}), <bang>0)
 nnoremap <Leader>F :Files<CR>
+" Uncomment to enable preview window
+" command! -bang -nargs=? -complete=dir Files
+"   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--preview', 'bat {} || less {}']}), <bang>0)
 " buffer finder
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
@@ -107,6 +109,12 @@ let Tlist_WinWidth = 40
 
 " Map jk in insert mode to ESC
 inoremap jk <ESC>
+
+" Make movements between splits easier
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 
 " Use ag for greping
 if executable('ag')
