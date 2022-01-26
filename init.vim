@@ -8,10 +8,6 @@ set background=dark
 colorscheme gruvbox
 filetype indent plugin on
 
-" Shorter wait to allow CursorHold trigger faster
-set updatetime=750
-
-" enable spell checking
 set spelllang=en,cjk
 set spell
 
